@@ -9,19 +9,19 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: TerraformCLI@2
-    displayName: Terraform Init
-    inputs:
-      command: 'init'
-      allowTelemetryCollection: false
+- task: TerraformCLI@2
+  displayName: Terraform Init
+  inputs:
+    command: 'init'
+    allowTelemetryCollection: false
 
-  - task: TerraformCLI@2
-    displayName: Terraform plan
-    inputs:
-      command: 'plan'
-      allowTelemetryCollection: false
-  
-  - task: TerraformCLI@2
-    inputs:
-      command: 'apply'
-      allowTelemetryCollection: true
+- task: TerraformCLI@2
+  displayName: Terraform plan
+  inputs:
+    command: 'plan'
+    allowTelemetryCollection: false
+
+- task: TerraformCLI@2
+  inputs:
+    command: 'apply'
+    allowTelemetryCollection: true
